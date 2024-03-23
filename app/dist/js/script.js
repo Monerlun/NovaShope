@@ -78,6 +78,8 @@ document.getElementById('loginForm').onsubmit = async function (e) {
     const querySnapshot = await getDocs(q);
 
     querySnapshot.forEach((doc) => localStorage.setItem("user", doc.id));
+ 
+document.getElementById("loginModal").hide()
 
     console.log('works')
 }
